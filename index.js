@@ -13,8 +13,12 @@ app.use(express.static("public"));
 
 //Routes
 app.get("/", (req, res) => {
-  //res.sendFile(path.resolve(__dirname, "pages/index.html"));
   res.render("index");
+});
+
+//about page
+app.get("/about", (req, res) => {
+  res.render("about");
 });
 
 app.listen(PORT, () => {
